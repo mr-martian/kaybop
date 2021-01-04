@@ -1,0 +1,154 @@
+# tuw(t)fob(p) san(t):-entire (noun derivational suffix)
+# dan(f)yist(t)a(b)mar(b) ap(t):let be (used to declare pronouns)
+# fil(b)faf(t)fev(t)fos(f)su*(b) rag(b):substitute ([subject] substitued [dir-object] for [indir-object], note that both subject and dir-object are in the nominative)
+# : sook(f):were-
+
+PATTERN Regular
+Stem
+NounStem Number Expectation Edibility Gender Death Awesomeness [va(f):LOG]? SomeNumber
+SomeNumber Even/Odd
+VerbPronouns? Stem VerbMiddle Awesomeness ErrorBar
+
+PATTERN Stem
+Roots(1): Roots(2)
+
+PATTERN ErrorBar
+[:±] SomeNumber [:%]
+
+PATTERN VerbMDT
+MentalState Day TruthAndSize
+
+PATTERN VerbMiddle
+Number Expectation VerbMDT
+
+PATTERN NounStem
+Stem Case
+Roots(1): :Roots(2) [san(t):<in>] Roots(2):
+[gyin(p):] Stem [:<front>]
+
+PATTERN VerbPronouns
+PronounPrefix [:<nom>] > PronounPrefix [:<acc>] > PronounPrefix [:<dat>]
+
+PATTERN SomeNumber
+[zov(p):73]
+Numerals+
+Numerals+ [point(f):.] Numerals+
+
+LEXICON Numerals
+ga(f):1
+dan(f):2
+yup(f)a(f):3
+kay(f)dan(f):4
+sna(f)ga(f):5
+zhna(f):6
+kay(f):7
+zi(f)ga(f):8
+vlim(p)ga(f):9
+
+LEXICON Case
+san(t)ap(t):<nom>
+ap(t):<acc>
+gye(t):<brief>
+sa(p):<suit>
+ja(t)ja(t):<justin>
+# san(t):<in> # infix before last syllable
+# gyin(p):<front> # prefix
+nai(b)ai(b)ai(b):<behind>
+
+LEXICON Number
+vlir(t):<fin>
+vig(t):<inf>
+
+LEXICON Expectation
+sang(b):<exp>
+sing(b):<unexp>
+sung(b):<semi-exp>
+
+LEXICON Edibility
+des(p)nu(t):<ed>
+es(p)u(t):<ined>
+
+LEXICON Gender
+vom(b)ngo(p):<hum>
+yak(b):<meta>
+gal(p):<opis>
+ni(b)nin(b):<angi>
+hak(t):<gymno>
+an(b)do(t):<min>
+vom(b):<g_other>
+
+LEXICON Death
+ngo(p)gag(b):<poison>
+ngo(p)da(t):<stupid>
+gag(b):<wombat>
+jup(f):<smoke>
+uff(f)da(t):<anvil>
+a(f):<heavy>
+ngag(t):<immortal>
+bang(t)bang(t):<sledgehammer>
+ka(t)tie(t):<axe>
+da(t):<guillotine>
+ngag(t):<sheep>
+%ap(t):<penguin>
+e(f):<d_other>
+
+LEXICON Awesomeness
+vlim(p)kay(f):<sub-meh>
+vost(t)grog(f):<meh>
+grog(f)kay(f):<ok>
+yam(t)ack(t)vlim(p):<cool>
+ash(f)tin(f)vlim(p):<great>
+grog(f):<amazing>
+vlim(p):<awesome>
+vlim(p)kay(f)sna(f):<epic>
+
+LEXICON MentalState
+es(p):<normal>
+niz(t):<buzz>
+ha(p)ha(p):<drunk>
+gor(t)gan(t):<high>
+vis(b)ick(b):<hallucinogen>
+not(p)dan(f)iel(f):<passion>
+dan(f)iel(f):<math>
+al(p)so(p)not(p)dan(f)iel(f):<panic>
+
+LEXICON Day
+snal(t):<sun>
+u(t):<mon>
+yan(b):<tue>
+glarg(p):<wed>
+kang(f)vu(p):<thur>
+zim(p):<fri>
+ec(t)to(t)morph(t):<fri13>
+zzz(b):<sat>
+
+LEXICON TruthAndSize
+ag(f)nar(b):<lie><large>
+sim(t)dyot(p):<lie><small>
+vom(b):<true><large>
+gland(t):<true><small>
+fish(b):<exageration><large>
+zim(b):<exageration><small>
+sta(t)tist(t):<misleading><large>
+ics(t):<misleading><small>
+chem(p):<simplify><large>
+ist(p)ry(p):<simplify><small>
+
+#Everything Else
+#pronouns are conjugated like nouns except in the inessive case where
+
+#“I” and “you” both become “kay(f)dan(f)tuw(t)fob(p)san(t)ap(t)”
+
+#“there” becomes “kay(f)dan(f)tuw(t)glo(t)yai(b)bai(b)san(t)ap(t)”
+
+#non-case endings are applied as normal
+
+#pronouns have the following abbreviated froms which can be prefixed to verbs. the first prefix is subject, second direct object, third indirect object
+
+LEXICON PronounPrefix
+kay(f):<p1><sg>
+dan(f):<p2>
+kay(f)dan(f)tuw(t):<p1><pl>
+kay(f)dan(f)tuw(t)glo(t):<p3><sg>
+yai(b)bai(b):<p3><pl>
+glo(t):<p3><sg><inan>

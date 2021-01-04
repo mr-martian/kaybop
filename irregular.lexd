@@ -1,0 +1,46 @@
+PATTERNS
+SomeNumber Even/Odd
+
+:AweInfix(4) VerbPronouns? AweInfix(1): VerbMiddle AweInfix(2): Awesomeness AweInfix(3): ErrorBar AweInfix(4):
+
+:IrregVerb(5) VerbPronouns? IrregVerb(1): Number IrregVerb(2): Expectation IrregVerb(3): VerbMDT IrregVerb(4): Awesomeness IrregVerb(5): ErrorBar
+
+PrefixVerb(1): :PrefixVerb(3) VerbPronouns? PrefixVerb(2): VerbMiddle PrefixVerb(3): Awesomeness ErrorBar
+
+LEXICON Even/Odd
+snil(f)dwin(f)san(t)ap(t)vlir(t)sang(b)es(p)u(t)vom(b)ngo(p)da(t)grog(f)kay(f)kay(f)dan(f):<num><odd>
+tuw(t)glo(t)yai(b)bai(b)san(t)ap(t)vlir(t)sang(b)es(p)u(t)vom(b)da(t)vlim(p)kay(f)sna(f)ga(f):<num><even>
+
+LEXICON PrefixVerb(3)
+yai(b)bai(b) yist(t)a(b)mar(b)ap(t) bang(t)bang(t):know(1)
+yai(b)bai(b) yist(t)a(b)mar(b)ap(t) :know(2)
+yai(b)bai(b) tuw(t)kay(f)dan(f)tuw(t)yist(t)a(b)mar(b)ap(t) bang(t)bang(t):give-up
+
+LEXICON IrregVerb(5)
+yai(b)bai(b) ag(b) vo(b) : :claim
+dan(f)tuw(t)glo(t) san(t)ap(t) : da(t) :quote(1)
+dan(f)tuw(t)glo(t) san(t)ap(t) : : :quote(2)
+kay(f) tuw(t)wap(t)fod(p)tub(t)bu!(f) gef(p) : :say
+dan(f) yoct(t)o(t)san(t) ap(t) : :scatter-across(1)
+: yoct(t)o(t)san(t) ap(t) a(f)yam(t)ack(t) sna(f):scatter-across(2)
+
+LEXICON AweInfix(4)
+glo(t)yai(b)bai(b)san(t)ap(t) da(t) : :build
+yai(b)bai(b)san(t)ap(t) da(t) : :call
+yai(b)bai(b)san(t)ap(t) da(t) : :confuse
+tuw(t)glo(t)yoct(t)o(t)san(t)ap(t) a(f)yam(t)ack(t) sna(f) :desert
+lap(b)lef(p)fag(b)beb(t)gos(p)las(p)ap(t) ngo(p)gag(b) kay(f) :give
+san(t)ap(t) ngo(p)e(f) zi(f) :hurt
+nal(t)zop(t)san(t)ap(t) ngo(p)bang(t)bang(t) : kay(f)dan(f):is(1)
+nal(t)zop(t)san(t)ap(t) %ap(t) : ga(f):is(2)
+tuw(t)fob(p)san(t)ap(t) ngag(t) sna(f) zhna(f):let-down
+fob(p)san(t)ap(t) ngo(p)gag(b) : kay(f)dan(f):make
+fob(p)san(t)san(t)ap(t) e(f) : :play
+glo(t)yai(b)bai(b)san(t)ap(t) da(t) : :possess
+yist(t)a(b)mar(b)ap(t) ngo(p)gag(b)ash(f)tin(f) sna(f) :run-around
+kay(f)dan(f)tuw(t)glo(t)yai(b)bai(b)san(t)ap(t) da(t) : :see
+tuw(t)fob(p)san(t)san(t)ap(t) ngo(p)uff(f)da(t)vost(t) : :setup
+zho(f)ap(t) e(f) kay(f)zi(f) :speak-truthfully
+kay(f)dan(f)tuw(t)glo(t)yai(b)bai(b)san(t)ap(t) da(t) : :tell
+shi(f)san(t)nar(f) gag(b) kay(f)vlim(p) :think-of
+gef(p)!of(p)pu(f)pop(f)lel(p)ap(t) ngag(t) : :understand

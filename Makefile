@@ -1,11 +1,15 @@
+SHELL = /bin/bash -o pipefail
+
 all: kaybop.hfst
-kaybop.hfst: kaybop_irreg.hfst kaybop_AM.hfst kaybop_NZ.hfst
+kaybop.hfst: kaybop_irreg.hfst kaybop_regular.hfst
+	hfst-disjunct $^ -o $@
+kaybop_regular.hfst: kaybop_AM.hfst kaybop_NZ.hfst
 	hfst-disjunct $^ -o $@
 kaybop_irreg.hfst: kaybop_irreg.lexd
 	lexd $< | hfst-txt2fst -o $@
 kaybop_AM.hfst: kaybop_AM.lexd
 	lexd $< | hfst-txt2fst -o $@
-kaybop_NZ.hfst: kaybop_NZ.lexd:
+kaybop_NZ.hfst: kaybop_NZ.lexd
 	lexd $< | hfst-txt2fst -o $@
 kaybop_irreg.lexd: morphology.lexd irregular.lexd
 	cat $^ > $@

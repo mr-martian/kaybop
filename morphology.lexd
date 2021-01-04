@@ -6,7 +6,6 @@
 PATTERN Regular
 Stem
 NounStem Number Expectation Edibility Gender Death Awesomeness [va(f):LOG]? SomeNumber
-SomeNumber Even/Odd
 VerbPronouns? Stem VerbMiddle Awesomeness ErrorBar
 
 PATTERN Stem
@@ -31,8 +30,10 @@ PronounPrefix [:<nom>] > PronounPrefix [:<acc>] > PronounPrefix [:<dat>]
 
 PATTERN SomeNumber
 [zov(p):73]
-Numerals+
-Numerals+ [point(f):.] Numerals+
+# Numerals+
+# Numerals+ [point(f):.] Numerals+
+Numerals Numerals?
+Numerals Numerals? [point(f):.] Numerals Numerals?
 
 LEXICON Numerals
 ga(f):1
@@ -152,3 +153,6 @@ kay(f)dan(f)tuw(t):<p1><pl>
 kay(f)dan(f)tuw(t)glo(t):<p3><sg>
 yai(b)bai(b):<p3><pl>
 glo(t):<p3><sg><inan>
+
+
+

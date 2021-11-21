@@ -1,5 +1,3 @@
 *.hfst
-kaybop_irreg.lexd
-kaybop_AM.lexd
-kaybop_NZ.lexd
 *~
+/.deps/*

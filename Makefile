@@ -1,6 +1,6 @@
 SHELL = /bin/bash -o pipefail
 
-all: kaybop.hfst
+all: kaybop_morf.hfstol kaybop_gen.hfstol
 
 .deps/.d:
 	mkdir -p .deps
@@ -8,6 +8,10 @@ all: kaybop.hfst
 
 kaybop.hfst: .deps/morphology.hfst .deps/stem.hfst .deps/stem-inf.hfst
 	hfst-substitute -f '{stem}:{stem}' -T .deps/stem.hfst .deps/morphology.hfst | hfst-substitute -o $@ -f '{steminf}:{steminf}' -T .deps/stem-inf.hfst
+kaybop_morf.hfstol: kaybop.hfst
+	hfst-fst2fst -O -o $@ $<
+kaybop_gen.hfstol: kaybop.hfst
+	hfst-invert $< | hfst-fst2fst -O -o $@
 
 .deps/morphology.hfst: kaybop.lexd .deps/.d
 	lexd $< | hfst-txt2fst -o $@

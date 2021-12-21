@@ -3,10 +3,11 @@
 # fil(b)faf(t)fev(t)fos(f)su*(b) rag(b):substitute ([subject] substitued [dir-object] for [indir-object], note that both subject and dir-object are in the nominative)
 # : sook(f):were-
 
-PATTERN Regular
+PATTERNS
 Stem
+Stem [:<adj>] SomeNumber
 NounStem Number Expectation Edibility Gender Death Awesomeness [va(f):LOG]? SomeNumber
-VerbPronouns? Stem VerbMiddle Awesomeness ErrorBar
+VerbPronouns? Stem [:<v>] VerbMiddle Awesomeness ErrorBar
 
 LEXICON Stem
 {stem}
@@ -24,12 +25,12 @@ PATTERN VerbMiddle
 Number Expectation VerbMDT
 
 PATTERN NounStem
-Stem Case
-StemInf [:<in>]
-[gyin(p):] Stem [:<front>]
+Stem [:<n>] Case
+StemInf [:<n><in>]
+[gyin(p):] Stem [:<n><front>]
 
 PATTERN VerbPronouns
-(PronounPrefix) [:<nom>] > (PronounPrefix) [:<acc>] > (PronounPrefix) [:<dat>]
+(PronounPrefix) [:<nom>+] > (PronounPrefix) [:<acc>+] > (PronounPrefix) [:<dat>+]
 
 PATTERN SomeNumber
 [zov(p):73]
@@ -163,7 +164,7 @@ glo(t):<p3><sg><inan>
 PATTERNS
 SomeNumber Even/Odd
 
-:AweInfix(4) VerbPronouns? AweInfix(1): VerbMiddle AweInfix(2): Awesomeness AweInfix(3): ErrorBar AweInfix(4):
+VerbPronouns? :AweInfix(4) [:<v>] AweInfix(1): VerbMiddle AweInfix(2): Awesomeness AweInfix(3): ErrorBar AweInfix(4):
 
 :IrregVerb(5) VerbPronouns? IrregVerb(1): Number IrregVerb(2): Expectation IrregVerb(3): VerbMDT IrregVerb(4): Awesomeness IrregVerb(5): ErrorBar
 

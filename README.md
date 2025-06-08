@@ -24,11 +24,27 @@ Run `make`
 ```
 $ echo '^fub(b)fiw(p)fe(b)fef(p)gem(p)shub(t)dan(f)$' | hfst-proc -g kaybop_morf.hfstol
 loophole<adj>2/snivel<adj>2/specific<adj>2/strum<adj>2/vull<adj>2
-$ echo '^snivel<adj>2$' | hfst-proc -g kaybop_gen.hfstol 
+$ echo '^snivel<adj>2$' | hfst-proc -g kaybop_gen.hfstol
 fub(b)fiw(p)fe(b)fef(p)gem(p)shub(t)dan(f)
 ```
 
-### Help
+## Conjugation Server
+
+A web interface that lets you select conjugations from dropdown lists and also informs you of alternative readings.
+
+### Prerequisites
+
+* the analyzer above
+* flask
+
+### Usage
+
+```
+$ FLASK_APP=server.py flask run --port 7000
+```
+
+Then open `http://localhost:7000` in your browser.
+
+## Help
 
 Try [Discord](https://discord.gg/XXsK8hfvS6).
-

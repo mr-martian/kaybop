@@ -1,0 +1,227 @@
+<html>
+  <head>
+    <title>kay(f)bop(t) Conjugator</title>
+  </head>
+  <body>
+    <script src="https://unpkg.com/htmx.org@2.0.4"></script>
+    <table>
+      <tr>
+	<td>
+	  <h3>Verb</h3>
+	  <form hx-post="/verb" hx-target="#results" hx-swap="afterbegin">
+	    <label for="lemma">Lemma</label>
+	    <input required id="lemma" type="text" name="lemma"></input>
+	    <br/>
+	    <label for="nom">Subject</label>
+	    <select id="nom" name="nom">
+	      <option value="none">None</option>
+	      <option value="p1.sg">1SG</option>
+	      <option value="p1.pl">1PL</option>
+	      <option value="p2">2</option>
+	      <option value="p3.sg">3SG</option>
+	      <option value="p3.sg.inan">3SG.INAN</option>
+	      <option value="p3.pl">3PL</option>
+	    </select>
+	    <br/>
+	    <label for="acc">Object</label>
+	    <select id="acc" name="acc">
+	      <option value="none">None</option>
+	      <option value="p1.sg">1SG</option>
+	      <option value="p1.pl">1PL</option>
+	      <option value="p2">2</option>
+	      <option value="p3.sg">3SG</option>
+	      <option value="p3.sg.inan">3SG.INAN</option>
+	      <option value="p3.pl">3PL</option>
+	    </select>
+	    <br/>
+	    <label for="dat">Indirect Object</label>
+	    <select id="dat" name="dat">
+	      <option value="none">None</option>
+	      <option value="p1.sg">1SG</option>
+	      <option value="p1.pl">1PL</option>
+	      <option value="p2">2</option>
+	      <option value="p3.sg">3SG</option>
+	      <option value="p3.sg.inan">3SG.INAN</option>
+	      <option value="p3.pl">3PL</option>
+	    </select>
+	    <br/>
+	    <label for="v_number">Number</label>
+	    <select id="v_number" name="number">
+	      <option value="fin">Finite</option>
+	      <option value="inf">Infinite</option>
+	    </select>
+	    <br/>
+	    <label for="v_expectation">Expected?</label>
+	    <select id="v_expectation" name="expectation">
+	      <option value="exp">Yes</option>
+	      <option value="unexp">No</option>
+	      <option value="semi-exp">Sort of</option>
+	    </select>
+	    <br/>
+	    <label for="mental">Mental State</label>
+	    <select id="mental" name="mental">
+	      <option value="normal">normal</option>
+	      <option value="buzz">buzz</option>
+	      <option value="drunk">drunk</option>
+	      <option value="high">high</option>
+	      <option value="hallucinogen">hallucinogen</option>
+	      <option value="passion">passion</option>
+	      <option value="math">math</option>
+	      <option value="panic">panic</option>
+	    </select>
+	    <br/>
+	    <label for="day">Day of the Week</label>
+	    <select id="day" name="day">
+	      <option value="sun">sun</option>
+	      <option value="mon">mon</option>
+	      <option value="tue">tue</option>
+	      <option value="wed">wed</option>
+	      <option value="thur">thur</option>
+	      <option value="fri">fri</option>
+	      <option value="fri13">fri13</option>
+	      <option value="sat">sat</option>
+	    </select>
+	    <br/>
+	    <label for="truth">Truth and Subject Size</label>
+	    <select id="truth" name="truth">
+	      <option value="lie.large">lie.large</option>
+	      <option value="lie.small">lie.small</option>
+	      <option value="true.large">true.large</option>
+	      <option value="true.small">true.small</option>
+	      <option value="exageration.large">exageration.large</option>
+	      <option value="exageration.small">exageration.small</option>
+	      <option value="misleading.large">misleading.large</option>
+	      <option value="misleading.small">misleading.small</option>
+	      <option value="simplify.large">simplify.large</option>
+	      <option value="simplify.small">simplify.small</option>
+	    </select>
+	    <br/>
+	    <label for="v_awe">Awesomeness</label>
+	    <select id="v_awe" name="awe">
+	      <option value="sub-meh">sub-meh</option>
+	      <option value="meh">meh</option>
+	      <option value="ok">ok</option>
+	      <option value="cool">cool</option>
+	      <option value="great">great</option>
+	      <option value="amazing">amazing</option>
+	      <option value="awesome">awesome</option>
+	      <option value="epic">epic</option>
+	    </select>
+	    <br/>
+	    <label for="error">Error Bar</label>
+	    <input id="error" name="error" type="number" min="1" max="99" value="5"></input>
+	    <br/>
+	    <button>Conjugate</button>
+	  </form>
+	</td>
+	<td>
+	  <h3>Noun</h3>
+	  <form hx-post="/noun" hx-target="#results" hx-swap="afterbegin">
+	    <label for="lemma">Lemma</label>
+	    <input required id="lemma" type="text" name="lemma"></input>
+	    <br/>
+	    <label for="case">Case</label>
+	    <select id="case" name="case">
+	      <option value="nom">nom</option>
+	      <option value="acc">acc</option>
+	      <option value="brief">brief</option>
+	      <option value="suit">suit</option>
+	      <option value="justin">justin</option>
+	      <option value="in">in</option>
+	      <option value="front">front</option>
+	      <option value="behind">behind</option>
+	    </select>
+	    <br/>
+	    <label for="n_number">Number</label>
+	    <select id="n_number" name="number">
+	      <option value="fin">Finite</option>
+	      <option value="inf">Infinite</option>
+	    </select>
+	    <br/>
+	    <label for="n_expectation">Expected?</label>
+	    <select id="n_expectation" name="expectation">
+	      <option value="exp">Yes</option>
+	      <option value="unexp">No</option>
+	      <option value="semi-exp">Sort of</option>
+	    </select>
+	    <br/>
+	    <label for="edible">Edible?</label>
+	    <select id="edible" name="edible">
+	      <option value="ed">Yes</option>
+	      <option value="ined">No</option>
+	    </select>
+	    <br/>
+	    <label for="gender">Gender</label>
+	    <select id="gender" name="gender">
+	      <option value="hum">hum</option>
+	      <option value="meta">meta</option>
+	      <option value="opis">opis</option>
+	      <option value="angi">angi</option>
+	      <option value="gymno">gymno</option>
+	      <option value="min">min</option>
+	      <option value="g_other">g_other</option>
+	    </select>
+	    <br/>
+	    <label for="death">Manner of Death</label>
+	    <select id="death" name="death">
+	      <option value="poison">poison</option>
+	      <option value="stupid">stupid</option>
+	      <option value="wombat">wombat</option>
+	      <option value="smoke">smoke</option>
+	      <option value="anvil">anvil</option>
+	      <option value="heavy">heavy</option>
+	      <option value="immortal">immortal</option>
+	      <option value="sledgehammer">sledgehammer</option>
+	      <option value="axe">axe</option>
+	      <option value="guillotine">guillotine</option>
+	      <option value="sheep">sheep</option>
+	      <option value="penguin">penguin</option>
+	      <option value="d_other">d_other</option>
+	    </select>
+	    <br/>
+	    <label for="n_awe">Awesomeness</label>
+	    <select id="n_awe" name="awe">
+	      <option value="sub-meh">sub-meh</option>
+	      <option value="meh">meh</option>
+	      <option value="ok">ok</option>
+	      <option value="cool">cool</option>
+	      <option value="great">great</option>
+	      <option value="amazing">amazing</option>
+	      <option value="awesome">awesome</option>
+	      <option value="epic">epic</option>
+	    </select>
+	    <br/>
+	    <label for="value">Market Value</label>
+	    <input type="number" value="25" name="value" id="value"></input>
+	    <label for="log">Log?</label>
+	    <input type="checkbox" name="log" id="log"></input>
+	    <br/>
+	    <button>Conjugate</button>
+	  </form>
+	</td>
+	<td>
+	  <h3>Adjective</h3>
+	  <form hx-post="/adj" hx-target="#results" hx-swap="afterbegin">
+	    <label for="lemma">Lemma</label>
+	    <input required id="lemma" type="text" name="lemma"></input>
+	    <br/>
+	    <label for="stddev">Standard Deviations</label>
+	    <input id="stddev" name="stddev" type="number" value="2"></input>
+	    <br/>
+	    <button>Conjugate</button>
+	  </form>
+	</td>
+	<td>
+	  <h3>Other</h3>
+	  <form hx-post="/other" hx-target="#results" hx-swap="afterbegin">
+	    <label for="lemma">Lemma</label>
+	    <input required id="lemma" type="text" name="lemma"></input>
+	    <br/>
+	    <button>Conjugate</button>
+	  </form>
+	</td>
+      </tr>
+    </table>
+    <div id="results"></div>
+  </body>
+</html>

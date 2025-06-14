@@ -45,6 +45,23 @@ $ FLASK_APP=server.py flask run --port 7000
 
 Then open `http://localhost:7000` in your browser.
 
+## Minimal Installation Process
+
+The following should work on most Linuxes and WSL:
+
+```bash
+curl https://apertium.projectjj.com/apt/install-nightly.sh -o apertium.sh
+sudo bash apertium.sh
+sudo apt-get install lexd hfst
+git clone https://github.com/mr-martian/kaybop
+cd kaybop
+make
+python3 -m venv venv
+. venv/bin/activate
+pip3 install Flask
+FLASK_APP=server.py flask run --port 7000
+```
+
 ## Help
 
 Try [Discord](https://discord.gg/XXsK8hfvS6).

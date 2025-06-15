@@ -28,7 +28,7 @@ kaybop_gen.hfstol: kaybop.hfst
 .deps/header.lexd: .deps/.d
 	printf 'PATTERNS\nRoot\nLEXICON Root\n' > $@
 .deps/infix.lexd: .deps/.d
-	printf 'PATTERNS\n[gyin(p):{in}]\n' > $@
+	printf 'PATTERNS\n[san(t):{in}]\n' > $@
 .deps/any-star.hfst:
 	echo '?*' | hfst-regexp2fst -o $@
 .deps/add-infix.hfst: .deps/infix.hfst .deps/any-star.hfst

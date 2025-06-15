@@ -1,3 +1,5 @@
 *.hfst
+*.hfstol
 *~
 /.deps/*
+__pycache__
